@@ -1,0 +1,25 @@
+name: Self Hosted Demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Print message
+        run: echo "Hello from Self-Hosted Runner"
+
+      - name: Show current user
+        run: whoami
+
+      - name: Show current directory
+        run: pwd
+
+      - name: Show hostname
+        run: hostname   
